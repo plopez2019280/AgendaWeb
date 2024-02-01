@@ -25,3 +25,16 @@ function redirectToContactPage(contactName) {
     window.location.href = `contacto.html?name=${contactName}`;
 }
 
+function addContact() {
+    const newContact = { name: 'Nuevo Contacto', phone: '000000000' };
+    contacts.push(newContact);
+    showContacts();
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    showContacts();
+
+    const addContactBtn = document.getElementById('add-contact-btn');
+    addContactBtn.addEventListener('click', addContact);
+});
