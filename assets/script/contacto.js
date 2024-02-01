@@ -14,7 +14,7 @@ function showContacts() {
 
     contacts.forEach(contact => {
         const listItem = document.createElement('li');
-        listItem.textContent = `${contact.name} - ${contact.phone}`;
+        listItem.textContent = `${contact.name} <=================> ${contact.phone}`;
         listItem.addEventListener('click', () => redirectToContactPage(contact.name));
         contactList.appendChild(listItem);
     });
@@ -26,7 +26,7 @@ function redirectToContactPage(contactName) {
 }
 
 function addContact() {
-    const newContact = { name: 'Nuevo Contacto', phone: '000000000' };
+    const newContact = { name: 'Pablito', phone: '7999-4512' };
     contacts.push(newContact);
     showContacts();
 }
@@ -38,3 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addContactBtn = document.getElementById('add-contact-btn');
     addContactBtn.addEventListener('click', addContact);
 });
+
+function redireccion(){
+    location.href = "./nuevoCon.html";
+}
