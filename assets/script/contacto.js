@@ -40,5 +40,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function redireccion(){
-    location.href = "./nuevoCon.html";
+    window.location.href = "./nuevoCon.html";
 }
